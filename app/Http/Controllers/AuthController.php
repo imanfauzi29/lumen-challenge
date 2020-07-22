@@ -34,12 +34,8 @@ class AuthController extends Controller
 
     public function auth(Request $request)
     {
-        if ($request->input("name") == "saya") {
-            return $this->generate($request);
-        }
+        return $this->generate($request);
 
-
-
-        return abort(401);
+        // return abort(401);
     }
 }
