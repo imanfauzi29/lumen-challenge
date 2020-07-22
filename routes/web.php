@@ -42,7 +42,7 @@ $router->group(['middleware' => 'jwt'], function () use ($router) {
         $router->patch("comment/{id}", "CommentController@update");
 
 
-        $router->get("post/author", "PostController@relAuthor");
+        // $router->get("post/author", "PostController@relAuthor");
         $router->get("post/{id}/author", "PostController@relAuthorById");
 
 
