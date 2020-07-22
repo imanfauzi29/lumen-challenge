@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Firebase\JWT\JWT;
+use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
@@ -29,6 +30,8 @@ class AuthController extends Controller
 
         $jwt = JWT::encode($payload, $key);
         // $decode = JWT::decode($jwt, $key, array('h5256'));
+
+        Log::info("generating...");
         return response()->json(["token" => $jwt]);
     }
 
