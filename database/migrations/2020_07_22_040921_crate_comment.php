@@ -15,12 +15,12 @@ class CrateComment extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string("content");
+            $table->longText("content");
             $table->string("status");
-            $table->string("author_id");
+            $table->integer("author_id");
             $table->string("email");
-            $table->longText("url");
-            $table->longText("post_id");
+            $table->string("url");
+            $table->integer("post_id");
             $table->timestamps();
         });
     }
